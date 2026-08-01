@@ -1,10 +1,9 @@
 version: '3'
 services:
-  svfe-api-firmador:
-    image: 375609200435.dkr.ecr.us-east-1.amazonaws.com/svfe-api-firmador:v20230109
-    container_name: svfe-api-firmador
-    ports:
-      - "8113:8113"
-    volumes:
-      - "./temp:/uploads"
-    restart: always
+ svfe-api-firmador:
+  image: svfe/svfe-api-firmador:v20230109
+  container_name: svfe-api-firmador
+  ports:
+   - "8113:8113"
+  volumes:
+   - "./temp:/uploads"
